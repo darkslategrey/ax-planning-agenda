@@ -20,8 +20,8 @@
 /**
  * 	\defgroup   mymodule     Module MyModule
  *  \brief      Example of a module descriptor.
- *				Such a file must be copied into htdocs/axagenda/core/modules directory.
- *  \file       htdocs/axagenda/core/modules/modAxAgenda.class.php
+ *				Such a file must be copied into htdocs/axplanning/core/modules directory.
+ *  \file       htdocs/axplanning/core/modules/modAxplanning.class.php
  *  \ingroup    mymodule
  *  \brief      Description and activation file for module MyModule
  */
@@ -31,7 +31,7 @@ include_once DOL_DOCUMENT_ROOT .'/core/modules/DolibarrModules.class.php';
 /**
  *  Description and activation class for module MyModule
  */
-class modAxAgenda extends DolibarrModules
+class modAxPlanning extends DolibarrModules
 {
 	/**
 	 *   Constructor. Define names, constants, directories, boxes, permissions
@@ -48,7 +48,7 @@ class modAxAgenda extends DolibarrModules
 		// Use here a free id (See in Home -> System information -> Dolibarr for list of used modules id).
 		$this->numero = 65000;
 		// Key text used to identify module (for permissions, menus, etc...)
-		$this->rights_class = 'axagenda';
+		$this->rights_class = 'axplanning';
 
 		// Family can be 'crm','financial','hr','projects','products','ecm','technic','other'
 		// It is used to group modules in module setup page
@@ -56,7 +56,7 @@ class modAxAgenda extends DolibarrModules
 		// Module label (no space allowed), used if translation string 'ModuleXXXName' not found (where XXX is value of numeric property 'numero' of module)
 		$this->name = preg_replace('/^mod/i','',get_class($this));
 		// Module description, used if translation string 'ModuleXXXDesc' not found (where XXX is value of numeric property 'numero' of module)
-		$this->description = "AxAgenda Specific Module";
+		$this->description = "AxPlanning Specific Module";
 		// Possible values for version are: 'development', 'experimental', 'dolibarr' or version
 		$this->version = '0.1';
 		// Key used in llx_const table to save module status enabled/disabled (where MYMODULE is value of property name of module in uppercase)
@@ -66,7 +66,7 @@ class modAxAgenda extends DolibarrModules
 		// Name of image file used for this module.
 		// If file is in theme/yourtheme/img directory under name object_pictovalue.png, use this->picto='pictovalue'
 		// If file is in module/img directory under name object_pictovalue.png, use this->picto='pictovalue@module'
-		$this->picto='pictovalue@axagenda';
+		$this->picto='pictovalue@axplanning';
 
 		// Defined all module parts (triggers, login, substitutions, menus, css, etc...)
 		// for default path (eg: /mymodule/core/xxxxx) (0=disable, 1=enable)
@@ -86,14 +86,14 @@ class modAxAgenda extends DolibarrModules
 		//                        	'tpl' => 0,                                      	// Set this to 1 if module overwrite template dir (core/tpl)
 		//							'barcode' => 0,                                  	// Set this to 1 if module has its own barcode directory (core/modules/barcode)
 		//							'models' => 0,                                   	// Set this to 1 if module has its own models directory (core/modules/xxx)
-					    // 'css' => array("/axagenda/css/redmond/jquery-ui-1.9.2.custom.css",
-					    'css' => array("/axagenda/includes/jquery/plugins/fullcalendar/fullcalendar/fullcalendar.css",
-							   "/axagenda/css/axagenda.css"),
+					    // 'css' => array("/axplanning/css/redmond/jquery-ui-1.9.2.custom.css",
+					    'css' => array("/axplanning/includes/jquery/plugins/fullcalendar/fullcalendar/fullcalendar.css",
+							   "/axplanning/css/axplanning.css"),
 
-					    /* 'js' => array(// '/axagenda/includes/jquery/plugins/fullcalendar/jquery/jquery-1.8.3.js', */
-					    /* 		  // '/axagenda/includes/jquery/plugins/fullcalendar/jquery/jquery-ui-1.9.2.custom.js', */
-					    'js' => array('/axagenda/includes/jquery/plugins/fullcalendar/fullcalendar/fullcalendar.js',
-							  '/axagenda/includes/jquery/plugins/fullcalendar/fullcalendar/init-calendar.js'), // Set this to relative path of js file if module must load a js on all pages
+					    /* 'js' => array(// '/axplanning/includes/jquery/plugins/fullcalendar/jquery/jquery-1.8.3.js', */
+					    /* 		  // '/axplanning/includes/jquery/plugins/fullcalendar/jquery/jquery-ui-1.9.2.custom.js', */
+					    'js' => array('/axplanning/includes/jquery/plugins/fullcalendar/fullcalendar/fullcalendar.js',
+							  '/axplanning/includes/jquery/plugins/fullcalendar/fullcalendar/init-calendar.js'), // Set this to relative path of js file if module must load a js on all pages
 		//							'hooks' => array('hookcontext1','hookcontext2')  	// Set here all hooks context managed by module
 		//							'dir' => array('output' => 'othermodulename'),      // To force the default directories names
 		//							'workflow' => array('WORKFLOW_MODULE1_YOURACTIONTYPE_MODULE2'=>array('enabled'=>'! empty($conf->module1->enabled) && ! empty($conf->module2->enabled)', 'picto'=>'yourpicto@mymodule')) // Set here all workflow context managed by module
@@ -105,7 +105,7 @@ class modAxAgenda extends DolibarrModules
 		$this->dirs = array();
 
 		// Config pages. Put here list of php page, stored into mymodule/admin directory, to use to setup module.
-		$this->config_page_url = array("admin.php@axagenda");
+		$this->config_page_url = array("admin.php@axplanning");
 
 		// Dependencies
 		$this->depends = array();		// List of modules id that must be enabled if this module is enabled
@@ -198,9 +198,9 @@ class modAxAgenda extends DolibarrModules
 		$this->menu[$r]=array(	'fk_menu'=>0,			                // Put 0 if this is a top menu
 					'type'=>'top',			                // This is a Top menu entry
 					'titre'=>'Ax Agenda',
-					'mainmenu'=>'axagenda',
+					'mainmenu'=>'axplanning',
 		//							'leftmenu'=>'mymodule',
-					'url'=>'/axagenda/index.php',
+					'url'=>'/axplanning/index.php',
 		//							'langs'=>'mylangfile@mymodule',	        // Lang file to use (without .lang) by module. File must be in langs/code_CODE/ directory.
 					'position'=>100,
 					// 'enabled'=>'$conf->mymodule->enabled',	// Define condition to show or hide menu entry. Use '$conf->mymodule->enabled' if entry must be visible if module is enabled.
@@ -210,12 +210,12 @@ class modAxAgenda extends DolibarrModules
 		$r++;
 		//
 		// Example to declare a Left Menu entry into an existing Top menu entry:
-		/* $this->menu[$r]=array(	'fk_menu'=>'fk_mainmenu=axagenda',		    // Use 'fk_mainmenu=xxx' or 'fk_mainmenu=xxx,fk_leftmenu=yyy' where xxx is mainmenucode and yyy is a leftmenucode */
+		/* $this->menu[$r]=array(	'fk_menu'=>'fk_mainmenu=axplanning',		    // Use 'fk_mainmenu=xxx' or 'fk_mainmenu=xxx,fk_leftmenu=yyy' where xxx is mainmenucode and yyy is a leftmenucode */
 		/* 			'type'=>'left',			                // This is a Left menu entry */
 		/* 			'titre'=>'Ax Agenda', */
-		/* 			'mainmenu'=>'axagenda', */
-		/* 			'leftmenu'=>'axagenda', */
-		/* 			'url'=>'/axagenda/menu_left.php', */
+		/* 			'mainmenu'=>'axplanning', */
+		/* 			'leftmenu'=>'axplanning', */
+		/* 			'url'=>'/axplanning/menu_left.php', */
 		/* 			//							'langs'=>'mylangfile@mymodule',	        // Lang file to use (without .lang) by module. File must be in langs/code_CODE/ directory. */
 		/* 			'position'=>100, */
 		/* 			// 'enabled'=>'$conf->mymodule->enabled',  // Define condition to show or hide menu entry. Use '$conf->mymodule->enabled' if entry must be visible if module is enabled. Use '$leftmenu==\'system\'' to show if leftmenu system is selected. */
@@ -285,7 +285,7 @@ class modAxAgenda extends DolibarrModules
 	 */
 	function load_tables()
 	{
-		return $this->_load_tables('/axagenda/sql/');
+		return $this->_load_tables('/axplanning/sql/');
 	}
 }
 

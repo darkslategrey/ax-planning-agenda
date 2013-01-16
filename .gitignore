@@ -1,6 +1,15 @@
-INSTALL.txt
-LICENSE.txt
-README.txt
-demos/
-extras/documentation
+/test.php
+/custom*
+/bootstrap
+/multicompany
+*.DS_Store
+*~
+*.orig
 
+tmp
+*.\#*
+documents
+htdocs/conf/conf.php
+*conf.php
+*.bckp
+*\#*\#
