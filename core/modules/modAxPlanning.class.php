@@ -197,6 +197,7 @@ class modAxPlanning extends DolibarrModules
 		// Example to declare a new Top Menu entry and its Left menu entry:
 		$this->menu[$r]=array(	'fk_menu'=>0,			                // Put 0 if this is a top menu
 					'type'=>'top',			                // This is a Top menu entry
+<<<<<<< HEAD:core/modules/modAxPlanning.class.php
 					'titre'=>'Ax Planning',
 					'mainmenu'=>'axplanning',
 		//							'leftmenu'=>'mymodule',
