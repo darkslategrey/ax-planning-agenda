@@ -1,6 +1,6 @@
 <?php
  
-class ActionsAxAgenda // extends CommonObject 
+class ActionsAxPlanning // extends CommonObject 
 { 
  
     /** Overloading the doActions function : replacing the parent's function with the one below 

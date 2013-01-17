@@ -19,8 +19,8 @@
  */
 
 /**
- *  \file		htdocs/axagenda/lib/axagenda.lib.php
- *  \brief		Set of function for the AxAgenda module
+ *  \file		htdocs/axplanning/lib/axplanning.lib.php
+ *  \brief		Set of function for the Axplanning module
  */
 
 

@@ -44,8 +44,8 @@ if (! $res && file_exists("../../../../dolibarr/htdocs/main.inc.php")) $res=@inc
 if (! $res && file_exists("../../../../../dolibarr/htdocs/main.inc.php")) $res=@include '../../../../../dolibarr/htdocs/main.inc.php';   // Used on dev env only
 if (! $res) die("Include of main fails");
 // Change this following line to use the correct relative path from htdocs
-dol_include_once('/axagenda/class/axagenda_class.class.php');
-dol_include_once('/axagenda/lib/axagenda.lib.php');
+dol_include_once('/axplanning/class/axplanning.class.php');
+dol_include_once('/axplanning/lib/axplanning.lib.php');
 if (! empty($conf->projet->enabled)) dol_include_once('/core/lib/project.lib.php');
 
 // Load traductions files requiredby by page
@@ -102,7 +102,7 @@ if ($action == 'add')
 /* 			  "/axagenda/includes/jquery/plugins/fullcalendar/fullcalendar/init-calendar.js"); */
 $fullcalendar_css = '';
 $fullcalendar_js  = '';
-llxHeader('','AxAgenda','','','','',$fullcalendar_js, $fullcalendar_css, 0,0);
+llxHeader('','AxPlanning','','','','',$fullcalendar_js, $fullcalendar_css, 0,0);
 $form=new Form($db);
 
 $head = calendars_prepare_head('');

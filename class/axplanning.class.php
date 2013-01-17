@@ -32,7 +32,7 @@
 /**
  *	Put here description of your class
  */
-class AxAgenda_Class // extends CommonObject
+class AxPlanning_Class // extends CommonObject
 {
 	var $db;							//!< To store db handler
 	var $error;							//!< To return error code (or message)

@@ -72,7 +72,7 @@ class modAxPlanning extends DolibarrModules
 		// for default path (eg: /mymodule/core/xxxxx) (0=disable, 1=enable)
 		// for specific path of parts (eg: /mymodule/core/modules/barcode)
 		// for specific css file (eg: /mymodule/css/mymodule.css.php)
-		$this->module_parts = array(
+		$this->module_parts = array();
 					    
 					    // 'hooks' => array('actioncommdao'),
  
@@ -87,17 +87,17 @@ class modAxPlanning extends DolibarrModules
 		//							'barcode' => 0,                                  	// Set this to 1 if module has its own barcode directory (core/modules/barcode)
 		//							'models' => 0,                                   	// Set this to 1 if module has its own models directory (core/modules/xxx)
 					    // 'css' => array("/axplanning/css/redmond/jquery-ui-1.9.2.custom.css",
-					    'css' => array("/axplanning/includes/jquery/plugins/fullcalendar/fullcalendar/fullcalendar.css",
-							   "/axplanning/css/axplanning.css"),
+					    /* 'css' => array("/axplanning/includes/jquery/plugins/fullcalendar/fullcalendar/fullcalendar.css", */
+					    /* 		   "/axplanning/css/axplanning.css"), */
 
 					    /* 'js' => array(// '/axplanning/includes/jquery/plugins/fullcalendar/jquery/jquery-1.8.3.js', */
 					    /* 		  // '/axplanning/includes/jquery/plugins/fullcalendar/jquery/jquery-ui-1.9.2.custom.js', */
-					    'js' => array('/axplanning/includes/jquery/plugins/fullcalendar/fullcalendar/fullcalendar.js',
-							  '/axplanning/includes/jquery/plugins/fullcalendar/fullcalendar/init-calendar.js'), // Set this to relative path of js file if module must load a js on all pages
+					    /* 'js' => array('/axplanning/includes/jquery/plugins/fullcalendar/fullcalendar/fullcalendar.js', */
+					    /* 		  '/axplanning/includes/jquery/plugins/fullcalendar/fullcalendar/init-calendar.js'), // Set this to relative path of js file if module must load a js on all pages */
 		//							'hooks' => array('hookcontext1','hookcontext2')  	// Set here all hooks context managed by module
 		//							'dir' => array('output' => 'othermodulename'),      // To force the default directories names
 		//							'workflow' => array('WORKFLOW_MODULE1_YOURACTIONTYPE_MODULE2'=>array('enabled'=>'! empty($conf->module1->enabled) && ! empty($conf->module2->enabled)', 'picto'=>'yourpicto@mymodule')) // Set here all workflow context managed by module
-					    );
+					    /* ); */
 		// $this->module_parts = array();
 
 		// Data directories to create when module is enabled.
@@ -197,7 +197,6 @@ class modAxPlanning extends DolibarrModules
 		// Example to declare a new Top Menu entry and its Left menu entry:
 		$this->menu[$r]=array(	'fk_menu'=>0,			                // Put 0 if this is a top menu
 					'type'=>'top',			                // This is a Top menu entry
-<<<<<<< HEAD:core/modules/modAxPlanning.class.php
 					'titre'=>'Ax Planning',
 					'mainmenu'=>'axplanning',
 		//							'leftmenu'=>'mymodule',
